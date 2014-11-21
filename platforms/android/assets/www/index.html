@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.0.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.0.min.js"></script>
+        <title>Step Up</title>
+    </head>
+    <body>
+        <div data-role="page" id="home">
+            <div data-role="header" data-position="fixed"><h1>Step Up</h1></div>
+            <div role="main" class="ui-content">
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <form>
+                            <label for="accelswitch">Step track switch:</label>
+                            <select id="accelswitch" name="accelswitch" data-role="flipswitch">
+                                <option value="0">Off</option>
+                                <option value="1">On</option>
+                            </select>
+                        </form>
+                        <div><ul id="vector"></ul></div>
+                    </div>
+                    <div class="ui-block-b">
+                        <div><ul id="ema"></ul></div>
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar" data-theme="b">
+                    <ul>
+                        <li><a href="#" data-icon="home" data-transition="none" class="ui-btn-active ui-state-persist">Home</a></li>
+                        <li><a href="#map" data-icon="location" data-transition="none" data-prefetch="true">Map</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="page" id="map">
+            <div data-role="header" data-position="fixed"><h1>Step Up</h1></div>
+            <div role="main" class="ui-content">Map</div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar" data-theme="b">
+                    <ul>
+                        <li><a href="#home" data-icon="home" data-transition="none" data-prefetch="true">Home</a></li>
+                        <li><a href="#" data-icon="location" data-transition="none" class="ui-btn-active ui-state-persist">Map</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            stepup.initialize();
+        </script>
+    </body>
+</html>
